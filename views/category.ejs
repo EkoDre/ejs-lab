@@ -1,0 +1,32 @@
+
+<%- include('partials/nav') %> <!-- Navigation bar -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= restaurant.name %> - <%= category %> Menu</title>
+</head>
+<body>
+  <h1><%= restaurant.name %> - <%= category %> Menu</h1>
+
+  <% if (menuItems.length > 0) { %> <!-- If there are items in the menu for this category -->
+    <ul>
+      <% menuItems.forEach(item => { %> <!-- For each item, do the following: -->
+        <li>
+          <strong><%= item.name %></strong><br> <!-- Show the name of the item -->
+          Price: $<%= item.price.toFixed(2) %><br> <!-- Show the price of the item -->
+          Rating: <%= item.rating %> stars<br> <!-- Show the rating -->
+          <em><%= item.details %></em> <!-- Show additional details of the item -->
+        </li>
+      <% }) %> <!-- End of the loop for each item -->
+    </ul>
+  <% } else { %> <!-- If no items, show a message -->
+    <p>No items found in this category. 😔</p>
+  <% } %>
+
+</body>
+</html>
+
+
