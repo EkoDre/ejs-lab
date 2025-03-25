@@ -86,7 +86,7 @@ const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
   const menuItems = RESTAURANT.menu.filter(item => item.category.toLowerCase() === category.toLowerCase());
   
   // Send the filtered menu and the capitalized category name to the view
-  res.render('category', { menuItems, category: capitalizedCategory });
+  res.render('category', { menuItems, category: capitalizedCategory,restaurant:RESTAURANT });
 
 });
 
@@ -95,3 +95,4 @@ app.listen(3000, () => {
   console.clear();
   console.log("Running on port 3000");
 });
+

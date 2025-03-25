@@ -1,5 +1,5 @@
 
-<%- include('partials/nav') %> <!-- Navigation bar -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,7 @@
   <title><%= restaurant.name %> - <%= category %> Menu</title>
 </head>
 <body>
+  <%- include('partials/nav') %> <!-- Navigation bar -->
   <h1><%= restaurant.name %> - <%= category %> Menu</h1>
 
   <% if (menuItems.length > 0) { %> <!-- If there are items in the menu for this category -->

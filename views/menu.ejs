@@ -13,6 +13,7 @@
     <% restaurant.menu.forEach(item => { %>
       <li>
         <strong><%= item.name %></strong> — $<%= item.price.toFixed(2) %><br>
+          Rating: <%= item.rating %> stars<br> <!-- Show the rating -->
         <em><%= item.details %></em>
       </li>
     <% }) %>
